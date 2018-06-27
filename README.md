@@ -12,6 +12,7 @@ vuexまで頑張るよー
 * [][]vueでtodoまで
 * [][]デザインは知らん
 * [][]vuex
+* [][]docsでサーブ
 
 ## Build Setup
 
