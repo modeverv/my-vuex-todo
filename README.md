@@ -1,8 +1,8 @@
 # my-vuex-todo
 
-vuexまで頑張るよー
-
 > A Vue.js project
+
+vuexまで頑張るよー
 
 ## LOG
 
@@ -13,6 +13,12 @@ vuexまで頑張るよー
 * [][]デザインは知らん
 * [][]vuex
 * [][]docsでサーブ
+
+## メモ
+
+筋が良いチュートリアルは  
+https://engineer.recruit-lifestyle.co.jp/techblog/2016-09-15-try-vue-flux/  
+とりまvueの復習
 
 ## Build Setup
 
