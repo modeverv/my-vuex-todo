@@ -1,6 +1,17 @@
 # my-vuex-todo
 
+vuexまで頑張るよー
+
 > A Vue.js project
+
+## LOG
+
+* [x][2018/06/28]ボイラープレート
+* [x][2018/06/28]github
+* [][]docsに入れるアレ
+* [][]vueでtodoまで
+* [][]デザインは知らん
+* [][]vuex
 
 ## Build Setup
 
