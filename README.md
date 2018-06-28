@@ -8,8 +8,7 @@ vuexまで頑張るよー
 
 * [x][2018/06/28]ボイラープレート
 * [x][2018/06/28]github
-* [][]docsに入れるアレ
-* [][]vueでtodoまで
+* [][]vueでtodoまで(vueの復習しながら)
 * [][]デザインは知らん
 * [][]vuex
 * [][]docsでサーブ
@@ -19,6 +18,18 @@ vuexまで頑張るよー
 筋が良いチュートリアルは  
 https://engineer.recruit-lifestyle.co.jp/techblog/2016-09-15-try-vue-flux/  
 とりまvueの復習
+
+```
+どうやって作ろうか
+vueの復習
+index系のvue
+formのvue
+表示のvue
+つなぎ
+辛い、となってvuexへ
+vuexは筋のよいチュートリアルを利用
+v-bind:keyがよくわからん
+```
 
 ## Build Setup
 
