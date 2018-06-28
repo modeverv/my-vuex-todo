@@ -1,5 +1,11 @@
 <template>
   <div class="hello">
+    <button @click="reverseMessage">reverseMessage</button>
+    <ol>
+      <li v-for="todo in todos" v-bind:key="todo.text">
+        {{ todo.text }}
+      </li>
+    </ol>
     <div v-if="seen">seen</div>
     {{ message }}
     <h1>{{ msg }}</h1>
@@ -18,7 +24,16 @@ export default {
       msg: 'Welcome to Your Vue.js App',
       message: 'aaaaaaaa!!!!!!!' ,
       msg2: new Date().toLocaleString(),
-      seen: true
+      seen: true,
+      todos : [
+        { text: '11111' },
+        { text: '22222' },
+      ]
+    }
+  },
+  methods: {
+    reverseMessage: function() {
+      this.message = this.message.split('').reverse().join('')
     }
   }
 }
