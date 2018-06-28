@@ -1,5 +1,7 @@
 <template>
   <div class="hello">
+    <p>{{ msg3 }}</p>
+    <input v-model="msg3"/>
     <button @click="reverseMessage">reverseMessage</button>
     <ol>
       <li v-for="todo in todos" v-bind:key="todo.text">
@@ -28,7 +30,8 @@ export default {
       todos : [
         { text: '11111' },
         { text: '22222' },
-      ]
+      ],
+      msg3: 'test'
     }
   },
   methods: {
