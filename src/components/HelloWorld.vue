@@ -3,7 +3,7 @@
     <h1>買い物リスト</h1>
     <div>
       <p>{{ msg3 }}</p>
-      <input type="text" v-model="t" />
+      <input type="text" v-model="t" @keyup.enter="addTask"/>
       <button @click="addTask">add</button>
     </div>
     <ul>
@@ -30,16 +30,20 @@
   </div>
 </template>
 
-<script>
-import VueH from 'vue'
-VueH.component('todo-item', {
+<script lang="ts">
+import Vue from 'vue'
+import Component from 'vue-class-component'
+
+Vue.component('todo-item', {
   template: '<li>This is todo</li>'
 })
-VueH.component('todo-item2', {
+Vue.component('todo-item2', {
   props: ['todo'],
   template: '<li>{{ todo.id }}:{{ todo.text }}</li>'
 })
-export default {
+
+//export default class Hello extends Vue {  
+export default Vue.extend({
   name: 'HelloWorld',
   data () {
     return {
@@ -75,20 +79,21 @@ export default {
       this.tasks.push(this.t);
     }
   },
-}
+})
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 ul {
-/*  list-style-type: none;*/
+  /*  list-style-type: none;*/
   padding: 0;
 }
 li {
-/*  display: inline-block;*/
+  /*  display: inline-block;*/
   margin: 0 10px;
 }
 a {
