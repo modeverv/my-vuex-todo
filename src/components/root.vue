@@ -2,24 +2,22 @@
 <div class="hello">
     <h1>Vuex Todo</h1>
     <f-input></f-input>
-    <ul>
-        <li v-for="task in tasks" v-bind:key="task">
-            {{ task }}
-        </li>
-    </ul>
+    <f-list></f-list>
 </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import Component from "vue-class-component";
-import FInput from "@/components/input/form.vue";
+import FInput from '@/components/input/form.vue';
+import FList from '@/components/output/list.vue';
 
 //export default class Hello extends Vue {
 export default Vue.extend({
   name: "Root",
   components: {
-    FInput
+    FInput,
+    FList,
   },
   data() {
     return {

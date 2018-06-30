@@ -17,7 +17,6 @@
 import Vue from "vue";
 import Component from "vue-class-component";
 
-//export default class Hello extends Vue {
 export default Vue.extend({
   name: "finput",
   data() {
