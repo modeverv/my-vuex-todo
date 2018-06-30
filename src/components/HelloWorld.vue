@@ -2,7 +2,6 @@
   <div class="hello">
     <h1>買い物リスト</h1>
     <div>
-      <p>{{ msg3 }}</p>
       <input type="text" v-model="t" @keyup.enter="addTask"/>
       <button @click="addTask">add</button>
     </div>
@@ -31,55 +30,51 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import Component from 'vue-class-component'
+import Vue from "vue";
+import Component from "vue-class-component";
 
-Vue.component('todo-item', {
-  template: '<li>This is todo</li>'
-})
-Vue.component('todo-item2', {
-  props: ['todo'],
-  template: '<li>{{ todo.id }}:{{ todo.text }}</li>'
-})
+Vue.component("todo-item", {
+  template: "<li>This is todo</li>"
+});
+Vue.component("todo-item2", {
+  props: ["todo"],
+  template: "<li>{{ todo.id }}:{{ todo.text }}</li>"
+});
 
-//export default class Hello extends Vue {  
+//export default class Hello extends Vue {
 export default Vue.extend({
-  name: 'HelloWorld',
-  data () {
+  name: "HelloWorld",
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App',
-      message: 'aaaaaaaa!!!!!!!' ,
+      msg: "Welcome to Your Vue.js App",
+      message: "aaaaaaaa!!!!!!!",
       msg2: new Date().toLocaleString(),
       seen: true,
-      todos : [
-        { text: '11111' },
-        { text: '22222' }
-      ],
-      msg3: 'test',
-      items : [
-        { id: 0, text: '000000'},
-        { id: 1, text: '111111'}
-      ],
-      tasks : [
-        "牛乳",
-        "たまご",
-        "ジュース"
-      ],
-      t: "",
-    }
+      todos: [{ text: "11111" }, { text: "22222" }],
+      msg3: "test",
+      items: [{ id: 0, text: "000000" }, { id: 1, text: "111111" }],
+      tasks: ["牛乳", "たまご", "ジュース"],
+      t: ""
+    };
   },
-  created: function(){
+  created: function() {
     console.log(new Date());
   },
   methods: {
-    reverseMessage: function () {
-      this.message = this.message.split('').reverse().join('')
+    reverseMessage: function() {
+      this.message = this.message
+        .split("")
+        .reverse()
+        .join("");
     },
-    addTask: function(){
-      this.tasks.push(this.t);
+    addTask: function() {
+      if ('' != this.t) {
+        this.tasks.push(this.t);
+        this.t = "";
+      }
     }
-  },
-})
+  }
+});
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
