@@ -52,4 +52,4 @@ class Child extends Parent implements Inta {
 }
 
 var hoge: Child = new Child("test");
-alert(hoge.public_hello());
+//alert(hoge.public_hello());
