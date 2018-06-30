@@ -1,8 +1,8 @@
 <template>
 <ul>
-    <li v-for="task in tasks" v-bind:key="task">
-        {{ task }}
-    </li>
+<li v-for="task in tasks" v-bind:key="task">
+    {{ task }}
+</li>
 </ul>
 </template>
 
