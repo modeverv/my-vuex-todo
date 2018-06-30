@@ -9,17 +9,14 @@
 <script lang="ts">
 import Vue from "vue";
 import Component from "vue-class-component";
+import { mapGetters } from "vuex";
 
 export default Vue.extend({
   name: "List",
-  data() {
-    return {
-      tasks: ["aaa","bbbbb"],
-    };
+  computed: {
+    ...mapGetters(['tasks'])
   },
-  created: function() {},
-  methods: {
-  }
+  created: function() {}
 });
 </script>
 
