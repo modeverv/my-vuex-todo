@@ -3,7 +3,7 @@
     <h1>買い物リスト</h1>
     <div>
       <p>{{ msg3 }}</p>
-      <input type="text" v-model="t"/>
+      <input type="text" v-model="t" />
       <button @click="addTask">add</button>
     </div>
     <ul>
