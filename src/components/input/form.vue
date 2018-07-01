@@ -15,10 +15,11 @@
 
 <script lang="ts">
 import Vue from "vue";
+import Component from "vue-class-component";
 import { mapActions } from "vuex";
 
 export default Vue.extend({
-  name: "finput",
+  name: "FInput",
   data() {
     return {
       t: "",

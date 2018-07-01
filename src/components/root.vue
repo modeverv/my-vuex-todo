@@ -12,7 +12,6 @@ import Component from "vue-class-component";
 import FInput from '@/components/input/form.vue';
 import FList from '@/components/output/list.vue';
 
-//export default class Hello extends Vue {
 export default Vue.extend({
   name: "Root",
   components: {
