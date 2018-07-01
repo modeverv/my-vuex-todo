@@ -1,21 +1,25 @@
 <template>
-<div>
+  <div>
     <p>write a task and press add buton.</p>
     <input 
-    :class="{hasError: isError}"
-    type="text" 
-    placeholder="a task"
-    v-model="t" 
-    @keyup.enter="aT"
-    />
+      :class="{hasError: isError}"
+      v-model="t" 
+      placeholder="a task"
+      type="text" 
+      @keyup.enter="aT"
+    >
     <button @click="aT">add</button>
-    <p class="not-show" :class="{hasError: isError}">blank is not permitted!</p>
-</div>
+    <p
+      :class="{hasError: isError}"
+      class="not-show">
+      blank is not permitted!
+    </p>
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import Component from "vue-class-component";
+//import Component from "vue-class-component";
 import { mapActions } from "vuex";
 
 export default Vue.extend({
@@ -35,7 +39,7 @@ export default Vue.extend({
         this.isError = false;
       }
       this.addTask(this.t)
-        .then(console.log("aT:" + this.t))
+        .then(() => window.console.log("aT:" + this.t))
         .then((this.t = ""));
     },
     ...mapActions(["addTask"])

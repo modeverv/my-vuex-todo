@@ -8,6 +8,7 @@ module.exports = {
   env: {
     browser: true,
   },
+  /*
   extends: [
     // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
     // consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
@@ -15,11 +16,20 @@ module.exports = {
     // https://github.com/standard/standard/blob/master/docs/RULES-en.md
     'standard'
   ],
+  */
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/base",
+    "plugin:vue/essential",
+    "plugin:vue/strongly-recommended",
+    "plugin:vue/recommended"
+  ],
   // required to lint *.vue files
   plugins: [
     'vue'
   ],
   // add your custom rules here
+  /*
   rules: {
     // allow paren-less arrow functions
     'arrow-parens': 0,
@@ -29,5 +39,12 @@ module.exports = {
     'brace-style': [2, 'stroustrup', {
       'allowSingleLine': true
     }],
+  }
+  */
+  "rules": {
+    "vue/html-self-closing": "off",
+    /*"semi": "error", */
+    /*"indent": ["error", 2],*/
+    /*"quotes": ["error", "single"]*/
   }
 }

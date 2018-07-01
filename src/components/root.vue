@@ -1,22 +1,22 @@
 <template>
-<div class="hello">
+  <div class="hello">
     <h1>Vuex Todo</h1>
     <f-input></f-input>
     <f-list></f-list>
-</div>
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import Component from "vue-class-component";
-import FInput from '@/components/input/form.vue';
-import FList from '@/components/output/list.vue';
+//import Component from "vue-class-component";
+import FInput from "@/components/input/form.vue";
+import FList from "@/components/output/list.vue";
 
 export default Vue.extend({
   name: "Root",
   components: {
     FInput,
-    FList,
+    FList
   },
   data() {
     return {
