@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
     <h1>Vuex Todo</h1>
-    <f-input></f-input>
-    <f-list></f-list>
+    <f-input/>
+    <f-list/>
   </div>
 </template>
 
