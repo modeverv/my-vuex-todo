@@ -5,8 +5,9 @@
     "module": "es2015",
     "moduleResolution": "node",
     "noImplicitAny": true,
-    "target": "es6",
-    "lib": ["dom", "es6", "es2015.promise"]
+    /*"target": "es6",*/
+    "target": "es5",
+    "lib": ["dom", "es2015", "es2015.promise"]
   },
   "include": [
     "./src/**/*.ts"

@@ -11,13 +11,14 @@ import Vue from "vue";
 import Component from "vue-class-component";
 import { mapGetters } from "vuex";
 
-export default Vue.extend({
-  name: "List",
+@Component<List>({
+  name: 'List',
   computed: {
     ...mapGetters(['tasks'])
   },
-  created: function() {}
-});
+})
+export default class List extends Vue {
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
