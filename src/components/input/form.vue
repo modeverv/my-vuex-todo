@@ -39,7 +39,7 @@ export default Vue.extend({
         this.isError = false;
       }
       this.addTask(this.t)
-        .then(window.console.log("aT:" + this.t))
+        .then(window.console.log("aT => " + this.t))
         .then((this.t = ""));
     },
     ...mapActions(["addTask"])
